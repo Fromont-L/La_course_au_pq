@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+	<head>
+		<script type="text/javascript" src="script.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/png" href="pq/La_variable_PQ.png" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie-edge">
+		<title>La course au PQ</title>
+		<div class="fondpq">
+			<header><h1>La Course Au PQ</h1></header>
+		</div>
+	</head>
+
+		<body onload="generateTable()">
+
+			<button class="reg1" onclick="togg('r1')">But du jeu</button>
+			<button class="reg2" onclick="togg('r2')">Règle n°1</button>
+			<button class="reg1" onclick="togg('r3')">Règle n°2</button>
+			<input type="checkbox" id="choixreg">Activer règle 2 ?</input>
+			<div class="toutbon">
+				<div id="r1">
+					<p><strong>But du jeu</strong></p>
+					<p>Le ou les premier(s) caddie(s) à franchir la ligne d'arrivée gagne(nt)... ainsi que le ou les dernier(s) si la case "Règle 2" est activée en début de partie</p>
+				
+
+				</div>
+				<div id="r2">
+					<p><strong>Règle n°1</strong></p>
+					<p>Le(s) premier(s) arrivé(s) avec son caddie plein remporte la partie, pas de pitié !</br>
+					Pour commencer à jouer, cliquez sur le bouton "Lancer les dés !"</p>
+				</div>
+
+				<div id="r3">
+					<p><strong>Règle n°2</strong></p>
+					<p>Pour activer cette règle, cocher la case en haut à droite.</br>
+					Si cette règle est activée, le ou les premier(s), ainsi que le ou les dernier(s) remportent la partie avec leur caddie plein ! </br>
+					Avec cette règle, jusqu'à 4 caddies peuvent gagner, lancer les paris et devinez qui va raffler le pq astucieusement !
+					</p>
+				</div>
+			</div>
+
+			<div>
+				<!--div pour aligner les boutons de règles-->
+			</div>
+
+			<table id="tableau">
+				<!--tableau automatique JS-->
+			</table>
+
+			<div class="d_placer">
+				<div class="lesdes">
+					<img class="des" id="d1" src="pq/1.png">
+					<img class="des" id="d2" src="pq/1.png">
+				</div>
+				<button class="d" id="nospam" onclick="random()">Lancez les dés !</button>
+			</div>
+
+			<div class="pqwin" id="pqwin">
+				<img class="imgwin" src="pq/Lance_PQ.png">
+				<p class="textwin" id="textwin">GG !</p>
+					<div class="buttonalign">
+						<button class="res" onclick="reset()">Rejouer la bataille du PQ</button>
+					</div>
+			</div>
+		</body>
+
+
+</html>
